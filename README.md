@@ -5,6 +5,6 @@ Clona el repositorio en tu servicor apache e instala las dependencias ("composer
 
 # Test
 
-Los test estan en PhpUnit.
+Los tests estan hechos con PhpUnit.
 comando para ejecutar los test: ./vendor/bin/phpunit tests
 
