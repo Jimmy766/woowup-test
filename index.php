@@ -8,8 +8,9 @@
 </form>
 
 <?php
-include_once("EscaleraService.php");
-include_once("RecompraService.php");
+require 'vendor/autoload.php';
+include_once("./src/EscaleraService.php");
+include_once("./src/RecompraService.php");
 
 $escaleraService=new EscaleraService();
 $escalones=$_POST['escalones']??null;
@@ -20,7 +21,7 @@ if(isset($escalones)) {
     echo "<br >";
 }
 
-$file=file_get_contents('../purchases-v2.json');
+$file=file_get_contents('purchases-v2.json');
 $purchases=json_decode($file,true);
 $recompraService=new RecompraService();
 
