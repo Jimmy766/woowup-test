@@ -6,7 +6,7 @@ class EscaleraService
 {
 
     public function execute($n){
-        if($n===null || !is_numeric($n)  ) throw new InvalidArgumentException("Debe ser un Entero");
+        if($n===null || !is_numeric($n) || $n==0  ) throw new InvalidArgumentException("Debe ser un Entero mayor que 0");
         return $this->stepsCombination($n,0);
     }
 
