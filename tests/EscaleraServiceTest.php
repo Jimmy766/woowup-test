@@ -16,6 +16,11 @@ class EscaleraServiceTest extends TestCase
     {
         $this->assertEquals(1,$this->escaleraService->execute(1));
     }
+    public function testExecuteValueZero()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->escaleraService->execute(0);
+    }
     public function testExecuteValueTwo()
     {
         $this->assertEquals(2,$this->escaleraService->execute(2));
